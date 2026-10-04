@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | MARJ APPAREL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="announcement">FREE SHIPPING ON ORDERS OVER ₱2,500</div>
+  <header class="site-header"><a class="brand" href="../index.html"><span class="brand-main">MARJ</span><span class="brand-sub">APPAREL</span></a><nav class="main-nav" style="display:flex"><a href="../index.html">Home</a><a href="shop.html">Shop</a></nav><div class="header-actions"><span class="cart-link">🛒 <span id="cartCount">0</span></span></div></header>
+  <main>
+    <section class="intro" style="padding-bottom:30px"><p class="eyebrow">YOUR SELECTION</p><h2>Shopping Bag</h2></section>
+    <section class="section" style="padding-top:20px;max-width:1100px;margin:auto">
+      <div id="cartItems"></div>
+      <div id="cartSummary" style="border-top:1px solid var(--line);margin-top:30px;padding-top:25px;text-align:right"></div>
+    </section>
+  </main>
+  <script src="../script.js"></script>
+  <script>
+    const container = document.getElementById("cartItems");
+    const summary = document.getElementById("cartSummary");
+    const cart = getCart();
+
+    if (!cart.length) {
+      container.innerHTML = '<div style="text-align:center;padding:60px 0;color:var(--muted)">Your shopping bag is empty.<br><br><a class="btn btn-dark" href="shop.html">CONTINUE SHOPPING</a></div>';
+    } else {
+      let total = 0;
+      container.innerHTML = cart.map((item, i) => {
+        total += item.price * item.qty;
+        return `<div style="display:grid;grid-template-columns:1fr 100px 100px 80px;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:center">
+          <div><p class="product-category">ITEM ${String(i+1).padStart(2,"0")}</p><h3 style="font-family:var(--serif);font-size:25px;margin:0">${item.name}</h3></div>
+          <div>₱${item.price.toLocaleString()}</div><div>Qty: ${item.qty}</div>
+          <button onclick="removeItem('${item.id}')" style="border:0;background:none;cursor:pointer;text-decoration:underline;font-size:9px">REMOVE</button>
+        </div>`;
+      }).join("");
+      summary.innerHTML = `<strong style="font-family:var(--serif);font-size:28px">Subtotal: ₱${total.toLocaleString()}</strong><br><br><button class="btn btn-dark" onclick="alert('Checkout will be connected to the order system in the next phase.')">CHECKOUT</button>`;
+    }
+
+    function removeItem(id) {
+      const updated = getCart().filter(item => item.id !== id);
+      saveCart(updated);
+      location.reload();
+    }
+  </script>
+</body>
+</html>

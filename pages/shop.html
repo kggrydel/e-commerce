@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | MARJ APPAREL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="announcement">FREE SHIPPING ON ORDERS OVER ₱2,500</div>
+  <header class="site-header">
+    <a class="brand" href="../index.html"><span class="brand-main">MARJ</span><span class="brand-sub">APPAREL</span></a>
+    <nav class="main-nav" style="display:flex">
+      <a href="../index.html">Home</a><a href="shop.html" class="active">Shop</a><a href="../index.html#new-arrivals">New Arrivals</a><a href="../index.html#luxury">Luxury</a><a href="../index.html#sale">Sale</a>
+    </nav>
+    <div class="header-actions"><a class="cart-link" href="cart.html">🛒 <span id="cartCount">0</span></a></div>
+  </header>
+
+  <main>
+    <section class="intro" style="padding-bottom:40px">
+      <p class="eyebrow">MARJ APPAREL</p>
+      <h2>Shop the collection.</h2>
+      <p>Explore clothing, bags, shoes, accessories and luxury finds.</p>
+    </section>
+
+    <section class="section" style="padding-top:20px">
+      <div class="product-grid">
+        <article class="product-card"><a class="product-image image-1" href="product.html?id=MARJ001"><span class="badge">NEW</span></a><div class="product-info"><p class="product-category">CLOTHING</p><h3>Signature Tailored Set</h3><p class="price">₱1,899</p></div><button class="add-btn" data-product="MARJ001" data-name="Signature Tailored Set" data-price="1899">ADD TO BAG</button></article>
+        <article class="product-card"><a class="product-image image-2" href="product.html?id=MARJ002"><span class="badge">NEW</span></a><div class="product-info"><p class="product-category">BAGS</p><h3>Structured Mini Bag</h3><p class="price">₱2,450</p></div><button class="add-btn" data-product="MARJ002" data-name="Structured Mini Bag" data-price="2450">ADD TO BAG</button></article>
+        <article class="product-card"><a class="product-image image-3" href="product.html?id=MARJ003"></a><div class="product-info"><p class="product-category">SHOES</p><h3>Classic Pointed Heels</h3><p class="price">₱2,199</p></div><button class="add-btn" data-product="MARJ003" data-name="Classic Pointed Heels" data-price="2199">ADD TO BAG</button></article>
+        <article class="product-card"><a class="product-image image-4" href="product.html?id=MARJ004"><span class="badge luxury">LUXURY</span></a><div class="product-info"><p class="product-category">ACCESSORIES</p><h3>Minimal Gold Timepiece</h3><p class="price">₱3,999</p></div><button class="add-btn" data-product="MARJ004" data-name="Minimal Gold Timepiece" data-price="3999">ADD TO BAG</button></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><div class="footer-brand">MARJ</div><p>Curated fashion & luxury.</p></div>
+    <div><h4>SHOP</h4><a href="#">Clothing</a><a href="#">Bags</a><a href="#">Shoes</a><a href="#">Accessories</a></div>
+    <div><h4>HELP</h4><a href="#">Contact Us</a><a href="#">Shipping & Delivery</a><a href="#">Returns</a></div>
+    <div><h4>FOLLOW</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+    <div class="footer-bottom">© <span id="year"></span> MARJ APPAREL. All rights reserved.</div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product | MARJ APPAREL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="announcement">FREE SHIPPING ON ORDERS OVER ₱2,500</div>
+  <header class="site-header">
+    <a class="brand" href="../index.html"><span class="brand-main">MARJ</span><span class="brand-sub">APPAREL</span></a>
+    <nav class="main-nav" style="display:flex"><a href="../index.html">Home</a><a href="shop.html" class="active">Shop</a></nav>
+    <div class="header-actions"><a class="cart-link" href="cart.html">🛒 <span id="cartCount">0</span></a></div>
+  </header>
+  <main>
+    <section class="section">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start">
+        <div class="product-image image-1" style="height:620px"><span class="image-label">MARJ EDIT</span></div>
+        <div style="padding-top:25px">
+          <p class="eyebrow">MARJ COLLECTION</p>
+          <h1 style="font-family:var(--serif);font-size:60px;font-weight:500;margin:0 0 10px">Signature Tailored Set</h1>
+          <p style="font-size:16px;margin-bottom:25px">₱1,899</p>
+          <p style="color:var(--muted);font-size:12px;line-height:1.9;max-width:500px">A refined statement piece designed for effortless styling. Product descriptions, images, sizes, colors and inventory will be connected to Google Sheets in the database phase.</p>
+          <div style="margin:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0">
+            <p class="product-category">SIZE</p>
+            <button class="add-btn" style="width:auto;padding:10px 20px">S</button>
+            <button class="add-btn" style="width:auto;padding:10px 20px">M</button>
+            <button class="add-btn" style="width:auto;padding:10px 20px">L</button>
+          </div>
+          <button class="add-btn" data-product="MARJ001" data-name="Signature Tailored Set" data-price="1899">ADD TO BAG</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>
